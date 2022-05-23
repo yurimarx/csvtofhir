@@ -31,6 +31,9 @@ src/User contains the source code
 2. Start the production and see message processing
 3. Check if the Akron Children's Hospital returns from GET http://localhost:32783/fhir/r4/Organization. See postman config: 
 
+<img src="https://github.com/yurimarx/csvtofhir/raw/master/orgpostman.png">
+
+
 
 
 ## Patient data
