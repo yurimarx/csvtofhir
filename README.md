@@ -1,8 +1,8 @@
  [![Gitter](https://img.shields.io/badge/Available%20on-Intersystems%20Open%20Exchange-00b2a9.svg)](https://openexchange.intersystems.com/package/iris-fhir-template)
  [![Quality Gate Status](https://community.objectscriptquality.com/api/project_badges/measure?project=intersystems_iris_community%2Firis-fhir-template&metric=alert_status)](https://community.objectscriptquality.com/dashboard?id=intersystems_iris_community%2Firis-fhir-template)
  [![Reliability Rating](https://community.objectscriptquality.com/api/project_badges/measure?project=intersystems_iris_community%2Firis-fhir-template&metric=reliability_rating)](https://community.objectscriptquality.com/dashboard?id=intersystems_iris_community%2Firis-fhir-template)
-# iris-fhirserver-template
-This is the base template for using InterSystems IRIS for Health Community Edition as a FHIR Server
+# csvtofhir
+This is a sample for create FHIR Resources from CSV files using InterSystems IRIS for Health Community Edition as a FHIR Server
 
 It setups a FHIR SERVER, imports the test data, demoes REST API usage with a simple web page.
 
@@ -14,7 +14,7 @@ Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installi
 Clone/git pull the repo into any local directory
 
 ```
-$ git clone https://github.com/intersystems-community/iris-fhir-template.git
+$ git clone https://github.com/yurimarx/csvtofhir.git
 ```
 
 Open the terminal in this directory and run:
@@ -22,6 +22,16 @@ Open the terminal in this directory and run:
 ```
 $ docker-compose up -d
 ```
+
+## The source code
+src/User contains the source code
+
+## Organization data from CSV
+1. Open the production http://localhost:32783/csp/healthshare/fhirserver/EnsPortal.ProductionConfig.zen?PRODUCTION=User.CSVToFhirProduction
+2. Start the production and see message processing
+3. Check if the Akron Children's Hospital returns from GET http://localhost:32783/fhir/r4/Organization. See postman config: 
+
+
 
 ## Patient data
 The template goes with 5 preloaded patents in [/data/fhir](https://github.com/intersystems-community/iris-fhir-server-template/tree/master/data/fhir) folder which are being loaded during [docker build](https://github.com/intersystems-community/iris-fhir-server-template/blob/8bd2932b34468f14530a53d3ab5125f9077696bb/iris.script#L26)
